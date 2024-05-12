@@ -76,7 +76,7 @@ test -x "${makexp}" || makexp="@abs_srcdir@/makexp_aix"
 CC=$1; shift
 whichcc=`which $CC`
 
-if test ! -x "$whichcc"; then
+if [ ! -x "$CC" ]; then
   echo "ld_so_aix: Compiler '$CC' not found; exiting."
   exit 2
 fi
